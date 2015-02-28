@@ -163,7 +163,7 @@ int main ()
    // the formula BMI=(weight*703)/(height**2)
 
    BMIndex= weight * 703; 
-   val = height * height; // I had lot of troubles multiplying height * 2 ... unary error
+   val = height * height; // I had lot of troubles multiplying height * 2 !!! unary error
    BMIndex= BMIndex / val;
    cout << "Your BMI is " << setprecision(2) << BMIndex;
 
