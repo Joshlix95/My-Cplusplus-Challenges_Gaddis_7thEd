@@ -222,7 +222,7 @@ int main ()
    // declaring variables
    double seconds, minutes, hours, days;
 
-   // Input by the user
+   // Input by the user (prompts the user to enter a value in seconds)
    cout << "Enter a number of seconds to be converted: \n";
    cin >> seconds;
 
