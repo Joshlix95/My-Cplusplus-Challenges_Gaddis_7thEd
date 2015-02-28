@@ -176,3 +176,185 @@ int main ()
 
    return 0;
 }
+
+// ==================================================================================
+// Chap 4 (7th Ed)
+// Challenge 6: MASS AND WEIGHT
+// By Josuel Musambaghani
+
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+   // Declaring local variables
+   double mass, weight;
+
+   // Prompt the user to enter a value for the mass and store it
+   cout << "Enter the value of the mass: \n";
+   cin >> mass;
+
+   // Calculate and display the weight
+   weight= mass * 9.8;
+   cout << "The weight is \n" << weight << "newtons \n";
+
+   // Judging the value of the weight using conditionals
+   if (weight > 1000)
+    cout << "Too heavy!";
+   else if (weight < 10)
+    cout << "Too light!";
+
+   return 0;
+}
+// ==================================================================================
+// Chap 4 (7th Ed)
+// Challenge 7: TIME CALCULATOR
+// By Josuel Musambaghani
+
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+   // declaring variables
+   double seconds, minutes, hours, days;
+
+   // Input by the user
+   cout << "Enter a number of seconds to be converted: \n";
+   cin >> seconds;
+
+   // Some operations
+   minutes=seconds/60.0;
+   hours = seconds/3600.0;
+   days= seconds/86400.0;
+
+   // Conversion of the input
+   if (seconds > 60)
+    cout << "Minutes: " << minutes <<endl;
+   if (seconds > 3600)
+    cout << "Hours: " << hours << endl;
+   if (seconds > 86400)
+    cout << "Day(s): " << days << endl;
+
+   return 0;
+}
+// ==================================================================================
+// Chap 4 (7th Ed)
+// Challenge 8: CHANGE FOR A DOLLAR GAME
+// By Josuel Musambaghani
+
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+   // declaring variables
+   double pennies, nickels, dimes, quarters, total;
+
+   // Prompt users to enter the number of coins
+   cout << "Enter the number of pennies: ";
+   cin >> pennies;
+   cout << "Enter the number of nickels: ";
+   cin >> nickels;
+   cout << "Enter the number of dimes: ";
+   cin >> dimes;
+   cout << "Enter the number of quarters: ";
+   cin >> quarters;
+
+   // Operations
+   total = (dimes * 0.01) + (nickels * 0.05) + (dimes * 0.1) + (quarters * 0.25);
+
+   // Display result of the game
+   if (total > 1)
+    cout << "Too high!";
+   else if (total < 1)
+    cout << "Too low!";
+   else
+    cout << "Wonderful, you won the game!!!";
+
+   return 0;
+}
+// ==================================================================================
+// Chap 4 (7th Ed)
+// Challenge 9: MATH TUTOR
+// By Josuel Musambaghani
+
+#include <iostream>
+#include <cstdlib> // for the use of rand()% variable
+#include <iomanip> // for the use of setw() to format numbers
+
+using namespace std;
+
+int main ()
+{
+   // declaring variables
+   int number1, number2, StudentAns, answer;
+
+   // Display two random numbers
+   number1 = 1+(rand()%1000);
+   number2 = 1+(rand()%1000);
+   cout << "Solve this problem: \n";
+   cout << setw(6) << number1 << endl;
+   cout << "+" << setw(5) << number2 << endl;
+   cout << setw(6) << "---" << endl;
+   cin >>  StudentAns;
+
+   // Compare answer
+   if (StudentAns == number1+number2)
+    cout << "Congrats!";
+   else
+    {
+        cout << "The correct answer is: \n";
+        cout << setw(6) <<number1 << endl; // setw() run because of the header iomanip
+        cout << "+" << setw(5) << number2 << endl; // it helps to format numbers on a same line
+        cout << setw(6) << "---" << endl;
+        cout << (number1+number2);
+    }
+
+
+   return 0;
+}
+// ==================================================================================
+// Chap 4 (7th Ed)
+// Challenge 10: SOFTWARE SALES
+// By Josuel Musambaghani
+
+#include <iostream>
+#include <cstdlib> // for the use of rand()% variable
+#include <iomanip> // for the use of setw() to format numbers
+
+using namespace std;
+
+int main ()
+{
+   // declaring variables
+   int quantity;
+   double discount1, discount2, discount3, discount4;
+
+   // Prompt the user to enter the number of items purchased
+   cout << "Enter the number of items purchased: \n";
+   cin >> quantity;
+
+   // More on variables
+   discount1 = 99-(99 * 0.2); // discount1 correspond to the purchase from 10 to 19
+   discount2 = 99-(99 * 0.3); // correspond to the purchase from 20 to 49
+   discount3 = 99-(99 * 0.4); // correspond to the purchase from 50 to 99
+   discount4 = 99-(99 * 0.5); // correspond to the purchase from 100 and above
+
+   // Conditionals
+   if (1 <= quantity && quantity < 10)
+        cout << "The total cost of purchase is: $" << quantity * 99 << endl;
+   else if (10 <= quantity && quantity <= 19)
+    cout << "The total cost of purchase is: $" << quantity * discount1 << endl;
+   else if (20 <= quantity && quantity <= 49)
+    cout << "The total cost of purchase is: $" << quantity * discount2 << endl;
+   else if (50 <= quantity && quantity <= 99)
+    cout << "The total cost of purchase is: $" << quantity * discount3 << endl;
+   else if (100 <= quantity)
+    cout << "The total cost of purchase is: $" << quantity * discount4 << endl;
+
+   return 0;
+}
