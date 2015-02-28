@@ -108,7 +108,7 @@ int main ()
 }
 // ==================================================================================
 // Chap 4 (7th Ed)
-// Challenge 4: AREAS OF RECTANGLE
+// Challenge 4: AREAS OF RECTANGLE (This program compares two areas of two rectangles)
 // By Josuel Musambaghani
 
 #include <iostream>
@@ -116,6 +116,7 @@ using namespace std;
 
 int main ()
 {
+   // declaration of variables for the two rectangles 
    double length1, length2, width1, width2, area1, area2;
 
    cout << "Enter the length and the width of the ";
