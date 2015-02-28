@@ -9,10 +9,10 @@ int main ()
 {
    int num1;
    int num2;
-   cout << "Enter a number: ";
+   cout << "Enter a number: "; // This prompts the user to enter the first number to be compared.
    cin >> num1;
 
-   cout << "Enter another number: ";
+   cout << "Enter another number: "; // The user enters the second number to be compared.
    cin >> num2;
 
    if (num1 > num2)
@@ -98,7 +98,7 @@ int main ()
    cout << "Enter a year in two digits: ";
    cin >> year;
 
-   if (month*day != year)
+   if (month*day != year) // magic dates means month*day = year, for instance 06/01/06 for July 1st, 2006 
     cout << "The date " << month <<"/" << day << "/" << year << " is not magic";
 
    else
