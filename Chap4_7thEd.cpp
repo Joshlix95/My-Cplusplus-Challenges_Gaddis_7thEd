@@ -1,5 +1,5 @@
 // Chap 4 (7th Ed)
-// Challenge 1: MINIMUM/MAXIMUM
+// Challenge 1: MINIMUM/MAXIMUM.
 // By Josuel Musambaghani
 
 #include <iostream>
